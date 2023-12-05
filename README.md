@@ -2,6 +2,7 @@
 
 # Requirement
 
+- docker
 - asdf
 
 # Getting Start
