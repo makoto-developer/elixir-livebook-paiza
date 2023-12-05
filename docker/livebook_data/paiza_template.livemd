@@ -1,0 +1,85 @@
+# Paiza template
+
+## Input
+
+```elixir
+input = """
+aaa
+bbb
+"""
+```
+
+## Expect
+
+```elixir
+expect = """
+aaa,bbb
+"""
+```
+
+## Solver Template
+
+```elixir
+is_paiza = false
+
+defmodule Probrem do
+  @moduledoc """
+  Paizaの問題を解くためのモジュールです。2つのモードがあります。
+
+  1. Paizaでテンプレートを貼り付けて実行します。
+  以下のコードを貼り付けてPaizaが読み取れるようにしてください。:stdioが自動でinputを読み取ってくれます。
+  Probrem.get_input() |> Probrem.solve() |> Probrem.answer()
+
+  2. ローカルでは以下のように実行して答えを確かめます
+  livebookのinputに解を、expectに想定結果を貼り付けてください。最後に比較してOK/NGを出力します。
+  input |> Probrem.get_input() |> Probrem.solve() |> Probrem.answer()
+  """
+
+  # Paizaが読み込む用
+  def get_input() do
+    is_paiza = true
+    :stdio |> IO.read(:all) |> String.trim()
+  end
+
+  # livebookでテストする用
+  def get_input(input) do
+    input |> String.trim()
+  end
+
+  # 解
+  def solve(input) do
+    result = input |> String.split("\n") |> Enum.join(",")
+
+    # 大抵の場合は複数行にまたがって処理を書くのでresultでバインドしている
+    result
+  end
+
+  # 出力
+  def answer(result) do
+    result
+  end
+end
+
+answer =
+  if is_paiza do
+    Probrem.get_input() |> Probrem.solve() |> Probrem.answer() |> IO.puts()
+  else
+    input |> Probrem.get_input() |> Probrem.solve()
+  end
+
+IO.puts(answer)
+```
+
+## Check
+
+```elixir
+# メモリ制限とかもかけたいが、一旦正解かどうかだで判断
+result =
+  if String.trim(expect) === String.trim(answer) do
+    "AC"
+  else
+    "WA"
+  end
+
+IO.puts(result)
+```

@@ -13,3 +13,7 @@ services:
       - LIVEBOOK_PORT=8090
       - LIVEBOOK_IFRAME_PORT=8091
       - LIVEBOOK_PASSWORD=${LIVEBOOK_PASSWORD}
+      # ローカルの開発環境なのでtokenによる認証は一旦解除
+      - LIVEBOOK_TOKEN_ENABLED=false
+    volumes:
+      - ./livebook_data:/data
