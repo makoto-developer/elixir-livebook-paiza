@@ -36,13 +36,17 @@ cp .env.example .env
 
 # edit secret, port, other configs, if you need.
 vi .env
+```
 
-# edit docker-compose.yml, if you need password when livebook starting auth.
+edit docker-compose.yml, if you need password when livebook starting auth.
+
+```shell
 vi docker-compose.yml
-# - LIVEBOOK_TOKEN_ENABLED=true
 
+# false to true, if you want auth.
+# - LIVEBOOK_TOKEN_ENABLED=false
 # remove comment out if you need auth.
-- #- LIVEBOOK_PASSWORD=${LIVEBOOK_PASSWORD}
+#- LIVEBOOK_PASSWORD=${LIVEBOOK_PASSWORD}
 ```
 
 Start docker compose.
@@ -65,7 +69,7 @@ docker compose start
 
 # Livebook
 
-1. When you want solve paiza problem, First of all, open paiza template book.
+1. When you want solve paiza problem, First of all, open paiza template book. Click `Open` Button.
 
 ![open_template.png](assets/open_template.png)
 
