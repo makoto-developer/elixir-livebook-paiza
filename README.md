@@ -81,7 +81,7 @@ docker compose start
 
 ![paiza_template_fork.png](assets/paiza_tempalte_fork.png)
 
-4. Rename livebook name.
+4. Rename livebook name, and you are ready to solve. Enjoy Paiza problems!😍
 
 ![rename_livebook.png](assets/rename_livebook.png)
 
