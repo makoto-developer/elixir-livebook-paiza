@@ -17,6 +17,17 @@ Clone this repository.
 git clone git@github.com:makoto-developer/elixir-livebook-paiza.git
 ```
 
+import asdf modules
+
+```shell
+asdf install
+
+
+# if you got not found plugins, execute this command.
+asdf plugin add elixir
+asdf plugin add erlang
+```
+
 create `.env` file
 
 ```shell
