@@ -84,7 +84,6 @@ end
 ## Get answer
 
 ```elixir
-# メモリ制限とかもかけたいが、一旦正解かどうかだで判断
 defmodule Check do
   def check(ans, expect) do
     if expect == ans do
