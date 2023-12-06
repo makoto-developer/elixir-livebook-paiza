@@ -11,15 +11,16 @@ I wanted to be able to solve paiza(https://paiza.jp/) by Elixir, and show result
 
 # Getting Start
 
-1. fork this template repository. Click `fork` button on repository page header. 
+1. fork this template repository. Click `fork` button on repository page header.
+2. Your forked repository make it `Private Repository`. Paiza claims **DO NOT PUBLISH PROBLEMS AND THE ANSEWER**. Please follow the rules.
 
-2. Clone forked repository.
+3. Clone forked repository.
 
 ```shell
 git clone git@github.com:makoto-developer/elixir-livebook-paiza.git
 ```
 
-3. import asdf modules
+4. import asdf modules
 
 ```shell
 asdf install
@@ -30,7 +31,7 @@ asdf plugin add elixir
 asdf plugin add erlang
 ```
 
-4. create `.env` file
+5. create `.env` file
 
 ```shell
 cp .env.example .env
@@ -40,7 +41,7 @@ cp .env.example .env
 vi .env
 ```
 
-5. edit docker-compose.yml, if you need password when livebook starting auth.
+6. edit docker-compose.yml, if you need password when livebook starting auth.
 
 ```shell
 vi docker-compose.yml
@@ -51,7 +52,7 @@ vi docker-compose.yml
 #- LIVEBOOK_PASSWORD=${LIVEBOOK_PASSWORD}
 ```
 
-6. Start docker compose.
+7. Start docker compose.
 
 ```shell
 dockcer compose up -d
