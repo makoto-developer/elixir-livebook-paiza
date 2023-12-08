@@ -16,8 +16,11 @@ I wanted to be able to solve paiza(https://paiza.jp/) by Elixir, and show result
 
 3. Clone forked repository.
 
+change path for your github name.
+
 ```shell
 git clone git@github.com:makoto-developer/elixir-livebook-paiza.git
+cd elixir-livebook-paiza << or renamed repository >>
 ```
 
 4. import asdf modules
